@@ -14,6 +14,7 @@ const TextEditor = () => {
   // draftToHtmlはHTML要素をタグにする
   console.log(draftToHtml(convertToRaw(editorState.getCurrentContent())));
   let textToHtml = draftToHtml(convertToRaw(editorState.getCurrentContent()));
+
   return (
     <>
       <div>
@@ -23,6 +24,31 @@ const TextEditor = () => {
           wrapperClassName="wrapperClassName"
           editorClassName="editorClassName"
           onEditorStateChange={setEditorState}
+          // 最小限のツールバーのみ表示
+          // toolbar={{
+          //   options: ["inline", "blockType"],
+          // }}
+          // ツールバーの表記を日本語にする
+          // localization={{
+          //   locale: "ja",
+          // }}
+          // プレースホルダーの文章
+          // placeholder="ここに入力してください"
+          // メンションの設定
+          mention={{
+            separator: " ",
+            trigger: "@",
+            suggestions: [
+              { text: "田中太郎", value: "田中太郎", url: "tanakataro" },
+              { text: "山田花子", value: "山田花子", url: "yamadahanako" },
+              { text: "鈴木順平", value: "鈴木順平", url: "suzukijunpei" },
+            ],
+          }}
+          // ハッシュタグの有効化
+          // hashtag={{
+          //   separator: " ",
+          //   trigger: "#",
+          // }}
         />
       </div>
       <div>

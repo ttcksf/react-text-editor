@@ -3,6 +3,7 @@
 }
 
 .App-logo {
+  /* ここを変更 */
   height: 4vmin;
   pointer-events: none;
 }
@@ -15,15 +16,16 @@
 
 .App-header {
   background-color: #282c34;
+  /* ここを変更 */
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* ここを変更 */
   font-size: calc(6px + 1vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
@@ -36,9 +38,31 @@
     transform: rotate(360deg);
   }
 }
-
+/* ここを変更 */
 .App .editor {
   width: 900px;
   margin-left: 20%;
   margin-top: 50px;
+}
+/* ここを変更 */
+.App .rdw-editor-main {
+  height: 200px;
+}
+/* ツールバー＋入力欄の全体 */
+.wrapperClassName {
+  background-color: lightgray;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+/* ツールバー */
+.toolbarClassName {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+/* 入力欄 */
+.editorClassName {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 0 8px;
+  height: 200px;
 }
